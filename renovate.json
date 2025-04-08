@@ -1,6 +1,29 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
-  ]
+    "config:base"
+  ],
+  "enabledManagers": [
+    "pub",
+    "fvm"
+  ],
+  "fvm": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": false
+    }
+  ],
+  "pub": {
+    "enabled": true
+  },
+  "timezone": "Asia/Tokyo"
 }
